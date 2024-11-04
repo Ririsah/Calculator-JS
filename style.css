@@ -1,0 +1,130 @@
+body{
+    background-image:url("bg.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#container{
+    width: 650px;
+    height: 800px;
+    background-color: rgb(20, 16, 12);
+    margin-top: 80px;
+    margin-left: 150px;
+    position: absolute;
+    border: 3px solid;
+}
+
+p{
+    color: white;
+    font-family: "Press Start 2P";
+    margin-bottom: 0px;
+    margin-left: 40px;
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+
+.onOff{
+    background-color: aqua;
+    margin-left: 510px;
+    font-size: 0.7em;
+    color: black;
+}
+
+#calculator{
+    font-family: Arial, sans-serif;
+    background-color: hsl(199, 29%, 29%);
+    width: 600px;
+    height: 650px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 23px;
+    border: 3px solid;
+}
+
+#header{
+    background-color: black;
+    height: 240px;
+    margin-top: 10px;
+}
+
+#display{
+    width: 550px;
+    height: 100px;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    background-color: black;
+    color: rgb(0, 227, 235);
+    margin-top: 100px;
+    border: 3px solid;
+    border-color: rgb(22, 21, 21);
+    font-family: "Press Start 2P";
+    font-size: 3rem;
+}
+
+.red{
+    height: 10px;
+    border: 3px solid;
+    background-color: rgb(2, 224, 158);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.green{
+    height: 7px;
+    border: 3px solid;
+    background-color: rgb(4, 81, 126);
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 7px;
+    margin-left: 12px;
+}
+
+button{
+    font-family: "Press Start 2P";
+    width: 120px;
+    height: 50px;
+    background-color: hsl(21, 22%, 13%);
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border: 3px solid;
+    border-color: black;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+
+.clear-btn{
+    margin-top: 10px;
+    width: 564px;
+    height: 57px;
+    background-color: rgb(189, 135, 53);
+}
+
+.operator-btn{
+    background-color: hsl(24, 60%, 5%);
+}
+
+.operator-btn:hover{
+    background-color: hsl(21, 26%, 22%);
+}
+
+.operator-btn:active{
+    background-color: hsl(35, 100%, 75%);
+}
