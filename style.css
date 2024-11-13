@@ -1,130 +1,176 @@
-body{
-    background-image:url("bg.gif");
+* {
+    font-family: "Press Start 2P";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("bg.gif");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
-    margin: 0;
 }
 
-#container{
-    width: 650px;
-    height: 800px;
+/* Estrutuda geral da calculadora */
+
+.container {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(20, 16, 12);
-    margin-top: 80px;
-    margin-left: 150px;
-    position: absolute;
+    max-width: 650px;
+    min-height: 800px;
+    margin: 170px;
+    margin-top: 50px;
+    padding: 30px;
     border: 3px solid;
 }
 
-p{
+@media (max-width: 1200px) {
+    .container {
+        margin: 30px;
+        margin-top: 50px;
+    }
+}
+
+/* Estrutuda do display da calculadora */
+
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    width: auto;
+    height: 90px;
+    padding-bottom: 20px;
+}
+
+div > p {
     color: white;
-    font-family: "Press Start 2P";
-    margin-bottom: 0px;
-    margin-left: 40px;
-    margin-top: 40px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-.onOff{
-    background-color: aqua;
-    margin-left: 510px;
-    font-size: 0.7em;
+.onOff {
     color: black;
+    background-color: aqua;
+    border: 3px solid;
+    cursor: pointer;
+    width: 130px;
+    height: 50px;
+    align-self: flex-end;
 }
 
-#calculator{
-    font-family: Arial, sans-serif;
+.calculator {
+    display: flex;
+    flex-direction: column;
     background-color: hsl(199, 29%, 29%);
-    width: 600px;
-    height: 650px;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 23px;
-    border: 3px solid;
+    width: auto;
+    height: 685px;
+    border: 3px solid black;
 }
 
-#header{
+.calculator-display {
     background-color: black;
-    height: 240px;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 230px;
 }
 
-#display{
-    width: 550px;
-    height: 100px;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
+#display {
     background-color: black;
+    width: 700px;
+    min-width: 200px;
+    height: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px solid rgb(34, 34, 34);
     color: rgb(0, 227, 235);
-    margin-top: 100px;
-    border: 3px solid;
-    border-color: rgb(22, 21, 21);
-    font-family: "Press Start 2P";
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
-.red{
-    height: 10px;
-    border: 3px solid;
-    background-color: rgb(2, 224, 158);
-    margin-top: 0px;
-    margin-bottom: 0px;
+.gray{
+    background-color: hsl(199, 29%, 29%);
+    height: 7px;
+    border: none;
+    border-bottom: 3px solid black;
 }
 
 .green{
+    background-color: rgb(2, 224, 158);
     height: 7px;
     border: 3px solid;
-    background-color: rgb(4, 81, 126);
-    margin-bottom: 30px;
-    margin-top: 0px;
+    border-left: none;
+    border-right: none;
 }
 
-#keys{
+.blue{
+    background-color: rgb(4, 81, 126);
+    height: 7px;
+    border: 3px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+/* Estrutuda dos botões da calculadora */
+
+.calculator-buttons {
+    background-color: transparent;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    padding: 7px;
-    margin-left: 12px;
+    grid-template-rows: repeat(4, 2fr);
+    gap: 20px;
+    margin: 20px;
+    margin-top: 50px;
 }
 
-button{
-    font-family: "Press Start 2P";
-    width: 120px;
-    height: 50px;
-    background-color: hsl(21, 22%, 13%);
+.calculator-buttons > button{
+    font-size: 1.2rem;
     color: white;
-    font-size: 1.7rem;
+    max-width: 140px;
+    height: 50px;
+    border: 3px solid black;
     cursor: pointer;
-    border: 3px solid;
-    border-color: black;
 }
 
-button:hover{
+.number-btn {
+    background-color: hsl(21, 22%, 13%);
+}
+
+.number-btn:hover{
     background-color: hsl(0, 0%, 40%);
 }
 
-button:active{
+.number-btn:active{
     background-color: hsl(0, 0%, 50%);
 }
 
-.clear-btn{
-    margin-top: 10px;
-    width: 564px;
-    height: 57px;
-    background-color: rgb(189, 135, 53);
-}
-
-.operator-btn{
+.operator-btn {
     background-color: hsl(24, 60%, 5%);
 }
 
 .operator-btn:hover{
-    background-color: hsl(21, 26%, 22%);
+    background-color: hsl(25, 55%, 10%);
 }
 
 .operator-btn:active{
-    background-color: hsl(35, 100%, 75%);
+    background-color: hsl(26, 32%, 17%);
+}
+
+.clear-btn {
+    background-color: rgb(189, 135, 53);
+    margin: 20px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: black;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.clear-btn:hover{
+    background-color: rgb(221, 163, 77);
+}
+
+.clear-btn:active{
+    background-color: rgb(250, 203, 133);
 }
