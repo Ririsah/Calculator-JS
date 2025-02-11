@@ -28,7 +28,7 @@ body {
     }
 }
 
-/* Estrutuda do display da calculadora */
+/* Estrutuda do display */
 
 .calculator-header {
     display: flex;
@@ -105,7 +105,7 @@ div > p {
     border-right: none;
 }
 
-/* Estrutuda dos botões da calculadora */
+/* Estrutuda dos botões */
 
 .calculator-buttons {
     display: grid;
